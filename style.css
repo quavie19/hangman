@@ -8,7 +8,6 @@ body{
     background: #ff4500;
     color: white;
     font-family: sans-serif;
-    font-size: 2rem;
 }
 
 .container{
@@ -16,12 +15,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .container > div{
-    padding: 20px 0;
+    padding: 10px 0;
 }
+
+.title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 
 
 div > button{
@@ -31,7 +36,7 @@ div > button{
     border: 1px solid white;
     border-radius: 10px;
     cursor: pointer;
-    font-size: large;
+    font-size: medium;
 
 }
 
@@ -43,8 +48,11 @@ div>button:hover{
 }
 
 .box{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 2px dotted white;
 }
 
+.word{
+    font-size: 2.5rem;
+}
