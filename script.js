@@ -23,10 +23,25 @@ function randomWord() {
     }
     return str
 }
-
 word.innerHTML = randomWord()
 
+// Hint function. returns a clue when hint button is clicked 
 
+function hint() {
+    hintbutton.addEventListener('click', function () {
+        if (result == 'MichaelJackson' || result == 'Prince') {
+            return clue.innerHTML = 'Clue - Music Artist'
+        }
+        else if (result == 'Giraffe') {
+            return clue.innerHTML = 'Clue - Animal'
+        }
+        else if (result == 'Doctor') {
+            return clue.innerHTML = 'Clue - Occupation' 
+        }
+        else {
+            return clue.innerHTML = 'Clue - Movie'
+        }
+    })
+}
 
-
-
+hint()
