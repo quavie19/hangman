@@ -1,16 +1,14 @@
-const letter = document.querySelector('.letters')
 let category = document.querySelector('.category')
 let word = document.querySelector('.word')
 let lives = document.querySelector('.lives')
 let clue = document.querySelector('.clue')
 const hintbutton = document.querySelector('.hint')
 const playAgainButton = document.querySelector('.play-again')
+let userLives = 10
 
-
-
-// generat random word
-const gameWords = ['Doctor', 'Michael Jackson', 'Prince', 'Giraffe', 'Lion King']
-let result = gameWords[Math.floor(Math.random()*gameWords.length)].split(' ').join('')
+// generate random word
+const gameWords = ['Doctor', 'MichaelJackson', 'Prince', 'Giraffe', 'LionKing']
+let result = gameWords[Math.floor(Math.random()*gameWords.length)]
 
 console.log(result)
 
@@ -45,3 +43,20 @@ function hint() {
 }
 
 hint()
+
+let newResult = result.split('')
+
+
+// once letter is clicked the letter is greyed out and can no longer be clicked 
+function letterGreyOut() {
+    const letters = document.querySelectorAll('.letter')
+    letters.forEach(letter => {
+        letter.addEventListener('click', function () {
+            letter.style.opacity = '0.4'
+        })
+    })
+}
+
+// when user clicks a letter: if letter is in word. letter appends to the place where letter is in the word.
+// if letter is not in word the user loses a life 
+
